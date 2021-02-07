@@ -1,6 +1,6 @@
-import mysql.connector
+import mysql.connector# first install mysql connector 
 mydb = mysql.connector.connect(
-  host="localhost",
+  host="localhost",   # mention your mysql user,host,password,and database
   user="mis_user",
   password="india#123",
   database="myadmin"
@@ -8,7 +8,7 @@ mydb = mysql.connector.connect(
 )
 
 mycursor = mydb.cursor()
-sql="insert into users (name ,address) values(%s,%s)"
+sql="insert into users (name ,address) values(%s,%s)"   #insert data into myadmin.users table
 val=("rushi","highway")
 
 mycursor.execute(sql,val)
