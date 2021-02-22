@@ -12,5 +12,5 @@ sql="insert into users (name ,address) values(%s,%s)"   #insert data into myadmi
 val=("rushi","highway")
 
 mycursor.execute(sql,val)
-mydb.commit()
+mydb.commit()# This is import when we save data in database
 print(mycursor.rowcount, "record inserted.")
